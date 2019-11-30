@@ -1,0 +1,127 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_activity_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detail.DetailActivity">
+
+    <FrameLayout
+        android:id="@+id/cont_create_toolbar"
+        android:layout_width="383dp"
+        android:layout_height="56dp"
+        android:background="@color/colorTransparentBlack"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imb_create_back"
+            style="@style/ImageButtonToolbar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_arrow_back_white_24dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp" />
+
+        <ImageButton
+            android:id="@+id/imb_create_done"
+            style="@style/ImageButtonToolbar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@android:drawable/ic_menu_recent_history" />
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imv_colored_background"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_create_toolbar" />
+
+
+    <TextView
+        android:id="@+id/lbl_date_and_time_header"
+        style="@style/Text.Primary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorTransparentBlack"
+        android:padding="16dp"
+        android:transitionName="@string/transition_time_and_date"
+        tools:text="2:43AM 09/7/2018"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imv_colored_background"/>
+
+    <TextView
+        android:id="@+id/lbl_message_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_date_and_time_header"/>
+
+    <TextView
+        android:id="@+id/lbl_preparation_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_message_body"/>
+
+    <TextView
+        android:id="@+id/lbl_travail_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_preparation_body"/>
+
+
+    <TextView
+        android:id="@+id/lbl_reposcourt_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_travail_body"/>
+
+    <TextView
+        android:id="@+id/lbl_nbr_cycles_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_reposcourt_body"/>
+
+    <TextView
+        android:id="@+id/lbl_nbr_series_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_nbr_cycles_body"/>
+
+    <TextView
+        android:id="@+id/lbl_reposlong_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_nbr_series_body"/>
+
+</android.support.constraint.ConstraintLayout>

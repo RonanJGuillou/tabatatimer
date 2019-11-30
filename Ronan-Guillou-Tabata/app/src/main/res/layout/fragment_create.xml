@@ -1,0 +1,153 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="roomdemo.wiseass.com.roomdemo.create.CreateFragment">
+
+
+    <FrameLayout
+        android:id="@+id/cont_create_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/colorTransparentBlack"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imb_create_back"
+            style="@style/ImageButtonToolbar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start"
+            android:src="@drawable/ic_arrow_back_white_24dp" />
+
+        <ImageButton
+            android:id="@+id/imb_create_done"
+            style="@style/ImageButtonToolbar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end"
+            android:src="@drawable/ic_done_white_24dp" />
+
+    </FrameLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_create_drawable"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_create_toolbar" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/vpi_create_drawable"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:padding="10dp"
+        app:fillColor="@color/colorAccent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cont_create_toolbar"
+        app:radius="8dp" />
+
+
+    <EditText
+        android:id="@+id/edt_create_message"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vpi_create_drawable"
+        android:hint = "Nom du Workflow" />
+
+    <EditText
+        android:id="@+id/edt_create_preparation"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_create_message"
+        android:hint = "Temps de préparation"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/edt_create_travail"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_create_preparation"
+        android:hint = "Temps de travail"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/edt_create_reposcourt"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_create_travail"
+        android:hint = "Temps de repos"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edt_create_nbrCycles"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_create_reposcourt"
+        android:hint = "Nombre de Cycles"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/edt_create_reposLong"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_create_nbrCycles"
+        android:hint = "Temps de repos entre les Cycles"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/edt_create_nbrSeries"
+        style="@style/EditTextCreateMessage"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_create_reposLong"
+        android:hint = "Nombre de Séries"
+        android:inputType="number" />
+
+
+
+</android.support.constraint.ConstraintLayout>
